@@ -1,0 +1,32 @@
+.user-name {
+    font-size: 16px;
+}
+
+.mine-user-card {
+    /*boxShadow: rgb(208, 208, 208) 2px 2px 8px;*/
+}
+.mine-user-card :active{
+    /*box-shadow: rgb(175, 173, 173) 2px 2px 2px;*/
+    background-color: whitesmoke;
+}
+.mine-user-card :hover{
+    /*box-shadow: rgb(175, 173, 173) 2px 2px 2px;*/
+    /*background-color: whitesmoke;*/
+}
+.user-department{
+    font-size: 13px;
+    color: #afafaf;
+}
+
+.user-name-div {
+    margin-left: 10px;
+    width: 100px;
+}
+
+.info-img {
+    color: #afafaf;
+    margin-right: 5px;
+    width: 15px;
+    height: 15px;
+    vertical-align: middle;
+}

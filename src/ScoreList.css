@@ -1,0 +1,40 @@
+.button-group {
+    width :100%;
+    textAlign:center;
+    position: fixed;
+    bottom: 0
+}
+
+.user-info {
+    background-color: white;
+    height: 200px;
+    width: 100%;
+}
+
+.user-info .user-head{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    width: 170px;
+    height: 170px;
+}
+
+.user-info-list {
+    margin-top: 20px;
+    width: 170px;
+    height: 150px;
+}
+.user-info-list p{
+    height: 25px;
+    line-height: 25px;
+}
+.user-info-list span{
+    height: 25px;
+    line-height: 25px;
+}
+.user-info-list .info-img {
+    margin-right: 5px;
+    width: 15px;
+    height: 15px;
+    vertical-align: middle;
+}
