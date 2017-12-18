@@ -61,7 +61,7 @@ class PageItem extends Component {
             code : code
         };
         let jsonOb = eval(parameter);
-        const url = Common.base_url + '/judge/cerateJudgeReact';
+        const url = Common.base_url + '/judge/createJudgeReact';
         request.post(url)
             .send(jsonOb)
             .end((err,res) => {
