@@ -1,5 +1,5 @@
 // const path = 'http://localhost';
-const path = 'http://weixin.shidanli.com:8081';
+const path = 'http://weixin.shidanli.cn:8081';
 const product_manager = '/scoremanager';
 const product_view = '/scoremanager_ui';
 const Common = {
