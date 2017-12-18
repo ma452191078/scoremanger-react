@@ -38,10 +38,11 @@ class PageItem extends Component {
             gameId: gameId,
             judgeId: judgeId
         };
+        let jsonOb = eval(parameter);
         console.log(parameter);
         const url = Common.base_url + '/player/getPlayerListByGameReact';
         request.post(url)
-            .send(parameter)
+            .send(jsonOb)
             .end((err, res) => {
                 // Calling the end function will send the request
                 const userList = res.body.playerList;
@@ -59,9 +60,10 @@ class PageItem extends Component {
             gameId : gameId,
             code : code
         };
+        let jsonOb = eval(parameter);
         const url = Common.base_url + '/judge/cerateJudgeReact';
         request.post(url)
-            .send(parameter)
+            .send(jsonOb)
             .end((err,res) => {
                 if (res !== undefined ){
                     if (res.body.errFlag === 0){
