@@ -1,10 +1,10 @@
-const path = 'http://localhost';
-// const path = 'http://weixin.shidanli.com';
-const product_manager = ':8088/scoremanager';
-const product_view = 'http://114.215.97.217:8081/scoremanager_ui';
+// const path = 'http://localhost';
+const path = 'http://weixin.shidanli.com:8081';
+const product_manager = '/scoremanager';
+const product_view = '/scoremanager_ui';
 const Common = {
     base_url : path + product_manager,
-    img_url : product_view,
+    img_url : path + product_view,
     getQueryString : function (name) {
         let reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
         let r = window.location.search.substr(1).match(reg);
