@@ -21,12 +21,12 @@ class PageItem extends Component {
     initLocalStorage(){
         const judgeId = store('judgeId');
         var gameId = Common.localQuery(this, 'gameId');
-        if (gameId === undefined || gameId === null){
+        if (gameId === undefined || gameId === null || gameId === 'undefined'){
             gameId = store('gameId');
         }else{
             store("gameId", gameId);
         }
-        if (judgeId === null || judgeId === undefined || judgeId === ''){
+        if (judgeId === null || judgeId === undefined || judgeId === 'undefined' || judgeId === ''){
             this.createJudge(gameId);
         }else{
             this.getPlayerList(gameId, judgeId)
