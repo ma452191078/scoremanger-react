@@ -100,7 +100,7 @@ class ScoreList extends Component {
                         <p><img alt='顺序' className='info-img' src={require('./imgs/user-index.svg')}/> {this.state.userInfo.playerNum}号</p>
                     </div>
                 </div>
-                <List>
+                <List style={{marginBottom:'70px',}}>
                     {roleList.map(function (roleInfo, ) {
                         return(<InputItem id={roleInfo.roleId} placeholder ={'得分请≤'+roleInfo.roleScore+'分'} key={roleInfo.roleId}> {roleInfo.roleName}</InputItem>);
                     })
@@ -108,7 +108,7 @@ class ScoreList extends Component {
 
                 </List>
 
-                <div className='button-group' style={{textAlign:'center'}}>
+                <div className='button-group' style={{textAlign:'center', bottom:'0px'}}>
                     <WhiteSpace />
                     <Button type="primary" inline style={{width:'40%', marginRight: '15px'}} onClick={this.submitScore.bind(this)}>提交</Button>
                     {/* use `am-button-borderfix`. because Multiple buttons inline arranged, the last one border-right may not display */}
