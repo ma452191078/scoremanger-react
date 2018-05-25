@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { List, InputItem, Button, WhiteSpace, Toast} from 'antd-mobile';
+import { List, InputItem, Button, Icon, NavBar, Toast} from 'antd-mobile';
 import store from 'storejs';
 import request from 'superagent';
 import Common from './Common.js';
@@ -90,6 +90,14 @@ class ScoreList extends Component {
         const roleList = this.state.gameInfo.gameRoleInfoList;
         return(
             <div>
+                <NavBar
+                    mode="dark"
+                    icon={<Icon type="left" />}
+                    rightContent={
+                        <div onClick={this.submitScore.bind(this)}>提交</div>
+                    }
+                    onLeftClick={this.cancelScore.bind()}
+                >{this.state.userInfo.playerName}</NavBar>
                 <div className="user-info">
                     <img className='user-head' style={{float:'left'}} alt='头像'
                         src={Common.img_url +this.state.userInfo.playerImg}
@@ -100,7 +108,7 @@ class ScoreList extends Component {
                         <p><img alt='顺序' className='info-img' src={require('./imgs/user-index.svg')}/> {this.state.userInfo.playerNum}号</p>
                     </div>
                 </div>
-                <List style={{marginBottom:'70px',}}>
+                <List>
                     {roleList.map(function (roleInfo, ) {
                         return(<InputItem id={roleInfo.roleId} placeholder ={'得分请≤'+roleInfo.roleScore+'分'} key={roleInfo.roleId}> {roleInfo.roleName}</InputItem>);
                     })
@@ -108,13 +116,13 @@ class ScoreList extends Component {
 
                 </List>
 
-                <div className='button-group' style={{textAlign:'center', bottom:'0px'}}>
-                    <WhiteSpace />
-                    <Button type="primary" inline style={{width:'40%', marginRight: '15px'}} onClick={this.submitScore.bind(this)}>提交</Button>
-                    {/* use `am-button-borderfix`. because Multiple buttons inline arranged, the last one border-right may not display */}
-                    <Button type="ghost" inline className="am-button-borderfix" style={{width:'40%',marginRight: '5px'}} onClick={this.cancelScore.bind()} >取消</Button>
-                    <WhiteSpace/>
-                </div>
+                {/*<div className='button-group' style={{textAlign:'center', bottom:'0px'}}>*/}
+                    {/*<WhiteSpace />*/}
+                    {/*<Button type="primary" inline style={{width:'40%', marginRight: '15px'}} onClick={this.submitScore.bind(this)}>提交</Button>*/}
+                    {/*/!* use `am-button-borderfix`. because Multiple buttons inline arranged, the last one border-right may not display *!/*/}
+                    {/*<Button type="ghost" inline className="am-button-borderfix" style={{width:'40%',marginRight: '5px'}} onClick={this.cancelScore.bind()} >取消</Button>*/}
+                    {/*<WhiteSpace/>*/}
+                {/*</div>*/}
 
             </div>
         );
