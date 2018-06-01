@@ -83,7 +83,8 @@ class ScoreList extends Component {
     }
 
     cancelScore(){
-        window.history.go(-1);
+        this.props.history.goBack();
+        // window.history.go(-1);
     }
 
     render(){
